@@ -8,9 +8,16 @@
     <header>
       <div class="header-top">
         <a>
-        <img src="img/logo_texnomart.png" width="220" height="47" alt="Техномарт">
+          <img src="img/logo_texnomart.png" width="220" height="47" alt="Техномарт">
         </a>
-          <p><button>Поиск:</button></p>
+        <div>
+          <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
+            <p>
+              <label for="search"> Поиск:</label>
+              <input type="search" id="search" >
+            </p>
+          </form>
+        </div>
           <p><a href="tab/html">Закладки:</a></p>
           <p><a href="basket.html">Корзина:</a></p>
           <p><a href="checkout.html"> Оформить заказ</a></p>
@@ -20,8 +27,12 @@
         <p>+7(812)555-05-55</p>
         <p>г. Санкт-Петербург, ул. Б.Конюшенная, д.19/8</p>
         <ul class="user-navigation">
-          <li><button>Войти</button></li>
-          <li><button>Регистрация</button></li>
+          <li>
+            <a class="button" href="#">Войти</a>
+          </li>
+          <li>
+            <a class="button" href="#">Регистрация</a>
+          </li>
         </ul>
       </div>
       <nav class="site-navigation">
@@ -62,13 +73,14 @@
               <img class="new" src="img/new_flag.png" width="60" height="60" alt="Новинка">
             </div>
            </li>
+
            <li class="offer-item">
             <div class="slider-tool">
               <div class="slider-tool slider-tool-drill slider-tool-activ">
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-              <a class="button" href="#">Открыть каталог</a>
-              <img src="img/slider_drills.jpg" alt="Мужчина с дрелью">
+                <h3>Дрели</h3>
+                <p>Соседям на радость!</p>
+                <a class="button" href="#">Открыть каталог</a>
+                <img src="img/slider_drills.jpg" alt="Мужчина с дрелью">
               </div>
               <div class="slider-tool slider-tool-punch">
                 <h3>Перфораторы</h3>
@@ -77,16 +89,25 @@
                 <img src="img/slider_punch.jpg" alt="Мужчина с перфоратором">
               </div>
               <ul class="slider-navigation">
-                <li><button><img src="img/icon-left.svg" alt="Влево"></button></li>
-                <li><button><img src="img/icon-right.svg" alt="Вправо"></button></li>
+                <li>
+                  <label for="direction-left">
+                    <button><img src="img/icon-left.svg" alt="Влево"></button>
+                  </label>
+                </li>
+                <li>
+                    <label for="direction-right">
+                      <button><img src="img/icon-right.svg" alt="Вправо"></button>
+                    </label>
+                  </li>
               </ul>
               <ul class="switch">
-                  <li><input type="radio" name="" value=""></li>
-                  <li><input type="radio" name="" value=""></li>
-                </ul>
+                  <li><input type="radio" id="direction-left" name="direction"></li>
+                  <li><input type="radio" id="direction-right" name="direction"></li>
+              </ul>
             </div>
           </li>
            <li class="offer-item">
+
              <div>
               <h3>Скидки</h3>
               <a href="#">на 350 товаров</a>
@@ -155,16 +176,26 @@
         <h2>СЕРВИСЫ</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами!
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными</p>
-        <ul class="service-user">
-          <li>Доставка</li>
-          <li>Гарантия</li>
-          <li>Кредит</li>
+        <ul class="service-list">
+          <li class="service-item">
+            <label for="service-delivery">Доставка</label>
+            <input type="radio" name="service" id="service-delivery">
+          </li>
+          <li class="service-item">
+            <label for="service-guarant">Гарантия</label>
+            <input type="radio" name="service" id="service-guarant">
+          </li>
+          <li class="service-item">
+            <label for="service-credit">Кредит</label>
+            <input type="radio" name="service" id="service-credit">
+          </li>
         </ul>
+
       <div class="service-slider">
         <div class="delivery delivery-active">
-        <h3>Доставка</h3>
-        <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем поднимая его на ваш этаж</p>
-        <img src="img/delivery.png" alt="Доставка">
+          <h3>Доставка</h3>
+          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем поднимая его на ваш этаж</p>
+          <img src="img/delivery.png" alt="Доставка">
         </div>
         <div class="guarant">
           <h3>Гарантия</h3>
@@ -181,6 +212,7 @@
               <img src="img/credit.png" alt="Кредит">
         </div>
       </div>
+
       </section>
       <section class="information">
         <div>
@@ -201,7 +233,7 @@
           <p>Вы можете забрать товар сами,
           заехав в наш офис:</p>
           <a href="#">
-          <img src="img/map.png" alt="Карта">
+          <img src="img/map.png" width="300" height="150" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
           </a>
          <a class="button button-feedback" href="#">Заблудились? Напишите нам!</a>
         </div>
@@ -255,13 +287,30 @@
     </footer>
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
-      <!--Здесь будет форма-->
-      <button class="modal-close">x</button>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="user-name">Ваше имя</label>
+          <input class="feedback-icon-user" id="user-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+        </p>
+        <p>
+          <label for="user-email">Ваш e-mail</label>
+          <input class="feedback-icon-mail" id="user-email" type="email" name="email" placeholder="Для отправки ответа">
+        </p>
+        <p>
+          <label for="text-letter">Текст письма</label>
+          <input class="feedback-icon-text" id="text-letter" type="text" name="text" placeholder="В свободной форме">
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
+
     <section class="modal modal-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <img src="img/map_big.png" alt="Подробная карта">
-        <button class="modal-close">x</button>
+        <p>
+        <img src="img/map_big.png" width="900" height="450" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </p>
+        <button class="modal-close">Закрыть</button>
     </section>
   </body>
 </html>
